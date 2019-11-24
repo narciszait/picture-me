@@ -45,10 +45,18 @@ extension DetailPresenter: DetailPresenterInput {
     }
     
     var hashtags: [String] {
+        for (index, var hashtag) in detailItem.hashtags.enumerated() {
+            hashtag.insert("#", at: hashtag.startIndex)
+            detailItem.hashtags[index] = hashtag
+        }
         return detailItem.hashtags
     }
     
     var motifs: [String] {
+        for (index, var motif) in detailItem.motifs.enumerated() {
+            motif.insert("#", at: motif.startIndex)
+            detailItem.motifs[index] = motif
+        }
         return detailItem.motifs
     }
     

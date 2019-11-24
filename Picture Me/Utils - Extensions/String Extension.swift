@@ -9,6 +9,10 @@
 import Foundation
 
 func flag(country: String) -> String {
+    if country == "" {
+        return "🌍"
+    }
+    
     let base : UInt32 = 127397
     var s = ""
     for v in country.unicodeScalars {

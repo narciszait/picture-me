@@ -43,7 +43,7 @@ extension HomePresenter: HomePresenterInput {
                                         shopName: item.shop?.name ?? "Secret shop",
                                         artistReviews: [
                 "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."],
-                                        country: item.shop?.address?.country ?? "🌍",
+                                        country: item.shop?.address?.country ?? "",
                                         imageUrl: item.shop?.portfolioPreview?.first?.image?.url ?? "https://bit.ly/34p9Hhi")
             coordinator?.navigate(route: .showDetail(detailItem: detailItem))
                 
@@ -73,7 +73,7 @@ extension HomePresenter: HomeInteractorOutput {
         if let searchData = response.result.data {
             homeItems = searchData.map { HomeItem(artistName: $0.artist?.name ?? "Undiscovered",
                                                   shopName: $0.shop?.name ?? "Secret shop",
-                                                  country: $0.shop?.address?.country ?? "🌍",
+                                                  country: $0.shop?.address?.country ?? "",
                                                   imageUrl: $0.shop?.portfolioPreview?.first?.image?.url ?? "https://bit.ly/34p9Hhi")}
             searchResponse = searchData
         } else {
@@ -90,7 +90,7 @@ extension HomePresenter: HomeInteractorOutput {
         if let searchData = response.result.data {
             let nextResults = searchData.map { HomeItem(artistName: $0.artist?.name ?? "Undiscovered",
                                                   shopName: $0.shop?.name ?? "Secret shop",
-                                                  country: $0.shop?.address?.country ?? "🌍",
+                                                  country: $0.shop?.address?.country ?? "",
                                                   imageUrl: $0.shop?.portfolioPreview?.first?.image?.url ?? "https://bit.ly/34p9Hhi")}
             homeItems += nextResults
             searchResponse += searchData

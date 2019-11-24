@@ -10,8 +10,8 @@ import Foundation
 
 struct DetailItem {
     let artistName: String
-    let hashtags: [String]
-    let motifs: [String]
+    var hashtags: [String]
+    var motifs: [String]
     let shopName: String
     let artistReviews: [String]
     let country: String

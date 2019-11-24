@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var flagView: UIView! {
         didSet {
             flagView.layer.cornerRadius = flagView.frame.height / 2
+            flagView.backgroundColor = .white
         }
     }
     @IBOutlet weak var countryLabel: UILabel!
