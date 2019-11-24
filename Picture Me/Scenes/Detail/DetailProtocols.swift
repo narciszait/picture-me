@@ -20,12 +20,12 @@ protocol DetailCoordinatorInput: class {
 
 // PRESENTER -> INTERACTOR
 protocol DetailInteractorInput {
-    func perform(_ request: Detail.Request.Item)
+//    func perform(_ request: Detail.Request.Item)
 }
 
 // INTERACTOR -> PRESENTER (indirect)
 protocol DetailInteractorOutput: class {
-    // func present(_ response: Detail.Response.Work)
+    
 }
 
 // ======== Presenter ======== //
@@ -45,5 +45,5 @@ protocol DetailPresenterInput {
 
 // PRESENTER -> VIEW
 protocol DetailPresenterOutput: class {
-    // func display(_ displayModel: Detail.DisplayData.Work)
+    
 }

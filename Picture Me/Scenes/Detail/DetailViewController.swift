@@ -50,7 +50,7 @@ class DetailViewController: UIViewController {
         artistNameLabel.text = presenter.artistName
         hashtagsLabel.text = presenter.hashtags.joined(separator: ", ")
         motifsLabel.text = presenter.motifs.joined(separator: ", ")
-        reviewsLabel.text = "Just as an example. It would be nice to have this as a horizontal scroll view"
+        reviewsLabel.text = "Just as an example. It would be nice to have this as a horizontal collection view"
         reviewExample.text = presenter.reviewExample.joined()
     }
 }
