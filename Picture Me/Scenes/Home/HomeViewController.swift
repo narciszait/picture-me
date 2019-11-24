@@ -72,9 +72,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 // PRESENTER -> VIEW
 extension HomeViewController: HomePresenterOutput {
     func display(_ displayModel: Home.DisplayData.Search) {
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
+        collectionView.reloadData()
     }
     
     func display(_ error: Home.DisplayData.Error) {

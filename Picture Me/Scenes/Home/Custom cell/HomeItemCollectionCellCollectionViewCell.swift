@@ -61,7 +61,7 @@ class HomeItemCollectionCellCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
-        backgroundImageView.image = UIImage()
+        backgroundImageView.image = nil
         artistNameLabel.text = ""
         shopNameLabel.text = ""
     }
