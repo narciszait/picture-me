@@ -12,7 +12,7 @@ import UIKit
 // ======== Coordinator ======== //
 
 // PRESENTER -> COORDINATOR
-protocol DetailCoordinatorInput: class {
+protocol DetailCoordinatorInput: AnyObject {
 
 }
 
@@ -24,7 +24,7 @@ protocol DetailInteractorInput {
 }
 
 // INTERACTOR -> PRESENTER (indirect)
-protocol DetailInteractorOutput: class {
+protocol DetailInteractorOutput: AnyObject {
     
 }
 
@@ -44,6 +44,6 @@ protocol DetailPresenterInput {
 }
 
 // PRESENTER -> VIEW
-protocol DetailPresenterOutput: class {
+protocol DetailPresenterOutput: AnyObject {
     
 }

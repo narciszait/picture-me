@@ -12,7 +12,7 @@ import UIKit
 // ======== Coordinator ======== //
 
 // PRESENTER -> COORDINATOR
-protocol HomeCoordinatorInput: class {
+protocol HomeCoordinatorInput: AnyObject {
     func navigate(route: Home.Route)
 }
 
@@ -25,8 +25,8 @@ protocol HomeInteractorInput {
 }
 
 // INTERACTOR -> PRESENTER (indirect)
-protocol HomeInteractorOutput: class {
     func present(_ response: Home.Response.SearchResult)
+protocol HomeInteractorOutput: AnyObject {
     func present(_ response: Home.Response.NextSearchResult)
     func present(_ response: Home.Response.Error)
 }
@@ -43,7 +43,7 @@ protocol HomePresenterInput {
 }
 
 // PRESENTER -> VIEW
-protocol HomePresenterOutput: class {
+protocol HomePresenterOutput: AnyObject {
     func display(_ displayModel: Home.DisplayData.Search)
     func display(_ error: Home.DisplayData.Error)
 }
